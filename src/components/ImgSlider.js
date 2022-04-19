@@ -4,41 +4,38 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const ImgSlider = (props) => {
-    let settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-    };
-    return (
-        <Carousel {...settings}>
-            <Wrap>
-                <a>
-                    <img src="/images/slider-badging.jpg" alt="" />
-                </a>
-            </Wrap>
-
-            <Wrap>
-                <a>
-                    <img src="/images/slider-scale.jpg" alt="" />
-                </a>
-            </Wrap>
-
-            <Wrap>
-                <a>
-                    <img src="/images/slider-badag.jpg" alt="" />
-                </a>
-            </Wrap>
-
-            <Wrap>
-                <a>
-                    <img src="/images/slider-scales.jpg" alt="" />
-                </a>
-            </Wrap>
-        </Carousel>
-    );
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
+  return (
+    <Carousel {...settings}>
+      <Wrap>
+        <a>
+          <img src="/images/slider-scale1.jpg" alt="" />
+        </a>
+      </Wrap>
+      <Wrap>
+        <a>
+          <img src="/images/slider-scales1.jpg" alt="" />
+        </a>
+      </Wrap>
+      <Wrap>
+        <a>
+          <img src="/images/slider-badging1.jpg" alt="" />
+        </a>
+      </Wrap>
+      <Wrap>
+        <a>
+          <img src="/images/slider-badg1.jpg" alt="" />
+        </a>
+      </Wrap>
+    </Carousel>
+  );
 };
 
 const Carousel = styled(Slider)`
@@ -56,11 +53,11 @@ const Carousel = styled(Slider)`
   ul li button {
     &:before {
       font-size: 10px;
-      color: rgb(150, 158, 171);
+      color: rgb(252, 244, 3);
     }
   }
   li.slick-active button:before {
-    color: white;
+    color: rgb(252, 244, 3);
   }
   .slick-list {
     overflow: initial;
@@ -91,7 +88,7 @@ const Wrap = styled.div`
     }
     &:hover {
       padding: 0;
-      border: 4px solid rgba(249, 249, 249, 0.8);
+      border: 4px solid rgb(252, 244, 3);
       transition-duration: 300ms;
     }
   }

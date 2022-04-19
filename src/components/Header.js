@@ -91,10 +91,9 @@ const Header = (props) => {
                         <SignOut>
                             <UserImg src={userPhoto} alt={userName} />
                             <DropDown>
-
                                 <ul>
                                     <li><span onClick={handleAuth}>Sign out</span></li>
-                                    <li>Settings</li>
+                                    <li><span>Settings</span></li>
                                     <li>Help</li>
                                 </ul>
                             </DropDown>
@@ -161,7 +160,7 @@ const NavMenu = styled.div`
         }
 
         span {
-            color: rgb(249,249,249);
+            color: rgb(252, 244, 3);
             font-size: 13px;
             letter-spacing: 1.42px;
             line-height: 1.5;
@@ -170,7 +169,7 @@ const NavMenu = styled.div`
             position: relative;
         
             &:before {
-                background-color: rgb(249,249,249);
+                background-color: rgb(252, 244, 3);
                 border-radius: 0px 0px 4px 4px;
                 bottom: -6px;
                 content: "";
@@ -223,7 +222,7 @@ const UserImg = styled.img`
 
 const DropDown = styled.div`
     position: absolute;
-    top: 48px;
+    top: 50px;
     right: 0px;
     background: rgb(19, 19, 19);
     border: 1px solid rgba(151, 151, 151, 0.34);
@@ -232,7 +231,7 @@ const DropDown = styled.div`
     padding: 10px;
     font-size: 14px;
     letter-spacing: 3px;
-    width: 100px;
+    width: auto;
     opacity: 0;
 `;
 

@@ -8,7 +8,13 @@ const Login = (props) => {
                     <CTALogoOne src="/images/cta-logo-one.svg" alt="CTA Logo One" />
                     <SignUp>SIGN UP HERE 😎</SignUp>
                     <Description>
-                        Welcome to the Final Semeter Project of Saksham Gupta...
+                        <h2>Welcome to the Final Semeter Project</h2>
+                        <h3>Made By</h3>
+                        <h4>Saksham Gupta(Team Leader)  -2001640140046</h4>
+                        <h4>Abhijeet Singh(Team Member) -2001640140003</h4>
+                        <h4>Ashutosh Gupta(Team Member)  -2001640140014</h4>
+                        <h4>Garima Trivedi(Team Member) -2001640140018</h4>
+                        <h4>Vinay Kumar(Team Member)    -2001640140063</h4>
                     </Description>
                     <CTALogoTwo src="/images/cta-logo-two.png" alt="CTA Logo Two"></CTALogoTwo>
                 </CTA>
