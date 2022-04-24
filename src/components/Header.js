@@ -55,7 +55,7 @@ const Header = (props) => {
     return (
         <Nav>
             <Logo>
-                <img src="/images/logo.svg" alt="HypeFlix"></img>
+                <img src="/images/png_logo_1.svg" alt="HypeFlix"></img>
             </Logo>
 
             {
@@ -131,7 +131,7 @@ const Logo = styled.a`
 
     img{
         display: block;
-        width: 100%;      
+        width: 80%;      
     }
 `;
 
