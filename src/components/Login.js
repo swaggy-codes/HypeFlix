@@ -6,15 +6,15 @@ const Login = (props) => {
             <Content>
                 <CTA>
                     <CTALogoOne src="/images/cta-logo-one.svg" alt="CTA Logo One" />
-                    <SignUp>SIGN UP HERE 😎</SignUp>
+                    <SignUp>HypeFlix😎</SignUp>
                     <Description>
-                        <h2>Welcome to the Final Semeter Project</h2>
-                        <h3>Made By</h3>
-                        <h4>Saksham Gupta(Team Leader)  -2001640140046</h4>
-                        <h4>Abhijeet Singh(Team Member) -2001640140003</h4>
-                        <h4>Ashutosh Gupta(Team Member)  -2001640140014</h4>
-                        <h4>Garima Trivedi(Team Member) -2001640140018</h4>
-                        <h4>Vinay Kumar(Team Member)    -2001640140063</h4>
+                        <h3>Welcome to the Final Semeter Project</h3>
+                        -: Made By :-<br></br>
+                        Saksham Gupta (2001640140046) - Team Leader<br></br>
+                        Abhijeet Singh (2001640140003)<br></br>
+                        Vinay Kumar (2001640140063)<br></br>
+                        Ashutosh Gupta (2001640140014)<br></br>
+                        Garima Trivedi (2001640140018)<br></br>
                     </Description>
                     <CTALogoTwo src="/images/cta-logo-two.png" alt="CTA Logo Two"></CTALogoTwo>
                 </CTA>
@@ -93,7 +93,7 @@ const SignUp = styled.a`
     margin-bottom: 12px;
     width: 100%;
     letter-spacing: 1.5px;
-    font-size: 18px;
+    font-size: 26px;
     padding: 16.5px 0;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -106,7 +106,7 @@ const SignUp = styled.a`
 
 const Description = styled.p`
     color: hsla(0, 0%, 95.5%, 1);
-    font-size: 18px;
+    font-size: 11px;
     margin: 0 0 24px;
     line-height: 1.5em;
     letter-spacing: 1.5px;
