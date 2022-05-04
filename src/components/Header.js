@@ -92,9 +92,13 @@ const Header = (props) => {
                             <UserImg src={userPhoto} alt={userName} />
                             <DropDown>
                                 <ul>
-                                    <li><span onClick={handleAuth}>Sign out</span></li>
+                                    <li><span onClick={handleAuth}>Sign Out</span></li>
+                                    <hr />
                                     <li><span>Settings</span></li>
+                                    <hr />
                                     <li>Help</li>
+                                    <hr />
+                                    <li>Contact Us</li>
                                 </ul>
                             </DropDown>
                         </SignOut>
@@ -230,8 +234,8 @@ const DropDown = styled.div`
     box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
     padding: 10px;
     font-size: 14px;
-    letter-spacing: 3px;
-    width: auto;
+    letter-spacing: 4px;
+    width: 12.5em;
     opacity: 0;
 `;
 
