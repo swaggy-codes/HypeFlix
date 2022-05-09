@@ -2,61 +2,65 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import db from "../firebase";
+// import VideoApp from "./VideoApp";//this can be used as an in app video player...
+// import { Player} from "./player/styles/Player";
+// import ReactPlayer from 'react-player/lazy';
 
 const Detail = (props) => {
-    const { id } = useParams();
-    const [detailData, setDetailData] = useState({});
+  const { id } = useParams();
+  const [detailData, setDetailData] = useState({});
 
-    useEffect(() => {
-        db.collection("movies")
-            .doc(id)
-            .get()
-            .then((doc) => {
-                if (doc.exists) {
-                    setDetailData(doc.data());
-                } else {
-                    console.log("no such document in firebase 🔥");
-                }
-            })
-            .catch((error) => {
-                console.log("Error getting document:", error);
-            });
-    }, [id]);
+  useEffect(() => {
+    db.collection("movies")
+      .doc(id)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setDetailData(doc.data());
+        } else {
+          console.log("no such document in firebase 🔥");
+        }
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+  }, [id]);
 
-    return (
-        <Container>
-            <Background>
-                <img alt={detailData.title} src={detailData.backgroundImg} />
-            </Background>
-
-            <ImageTitle>
-                <img alt={detailData.title} src={detailData.titleImg} />
-            </ImageTitle>
-            <ContentMeta>
-                <Controls>
-                    <Player>
-                        <img src="/images/play-icon-black.png" alt="" />
-                        <span>Play</span>
-                    </Player>
-                    <Trailer>
-                        <img src="/images/play-icon-black.png" alt="" />
-                        <span>Trailer</span>
-                    </Trailer>
-                    <AddList>
-                        <span />
-                        <span />
-                    </AddList>
-                    <GroupWatch>
-                        <div>
-                            <img src="/images/group-icon.png" alt="" />
-                        </div>
-                    </GroupWatch>
-                </Controls>
-                <SubTitle>{detailData.subTitle}</SubTitle>
-                <Description>{detailData.description}</Description>
-            </ContentMeta>
-        </Container>
-    );
+  return (
+    <Container>
+      <Background>
+        <img alt={detailData.title} src={detailData.backgroundImg} />
+      </Background>
+      <ImageTitle>
+        <img alt={detailData.title} src={detailData.titleImg} />
+      </ImageTitle>
+      <ContentMeta>
+        <Controls>
+          <PlayerButton as="a" href="/videos/bao.mp4">
+            {/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
+            <img src="/images/play-icon-black.png" alt="" />
+            <span>Play</span>
+          </PlayerButton>
+          <Trailer>
+            <img src="/images/play-icon-black.png" alt="" />
+            <span>Trailer</span>
+          </Trailer>
+          <AddList>
+            <span />
+            <span />
+          </AddList>
+          <GroupWatch>
+            <div>
+              <img src="/images/group-icon.png" alt="" />
+            </div>
+          </GroupWatch>
+        </Controls>
+        <SubTitle>{detailData.subTitle}</SubTitle>
+        <Description>{detailData.description}</Description>
+      </ContentMeta>
+      {/* <VideoApp /> */}
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -113,7 +117,7 @@ const Controls = styled.div`
   min-height: 56px;
 `;
 
-const Player = styled.button`
+const PlayerButton = styled.button`
   font-size: 15px;
   margin: 0px 22px 0px 0px;
   padding: 0px 24px;
@@ -126,7 +130,7 @@ const Player = styled.button`
   letter-spacing: 1.8px;
   text-align: center;
   text-transform: uppercase;
-  background: rgb (249, 249, 249);
+  background: white;
   border: none;
   color: rgb(0, 0, 0);
   img {
@@ -146,7 +150,7 @@ const Player = styled.button`
   }
 `;
 
-const Trailer = styled(Player)`
+const Trailer = styled(PlayerButton)`
   background: rgb (249, 249, 249);
   border: 1px solid rgb(249, 249, 249);
   color: rgb(0, 0, 0);

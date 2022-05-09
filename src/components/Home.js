@@ -5,6 +5,7 @@ import Recommends from "./Recommends";
 import NewHype from "./NewHype";
 import Originals from "./Originals";
 import Trending from "./Trending";
+import VideoApp from "./VideoApp";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import db from "../firebase";
@@ -58,6 +59,7 @@ const Home = (props) => {
         <Container>
             <ImgSlider />
             <Viewers />
+            {/* <VideoApp /> */}
             <Recommends />
             <NewHype />
             <Originals />
