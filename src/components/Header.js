@@ -54,39 +54,40 @@ const Header = (props) => {
 
     return (
         <Nav>
-            <Logo>
-                <img src="/images/png_logo_1.svg" alt="HypeFlix"></img>
-            </Logo>
-
+            <a href="/home">
+                <Logo>
+                    <img src="/images/png_logo_1.svg" alt="HypeFlix"></img>
+                </Logo>
+            </a>
             {
                 !userName ? (<Login onClick={handleAuth}>LogIn</Login>
                 ) : (
                     <>
                         <NavMenu>
                             <a href="/home">
-                                <img src="/images/home-icon.svg" alt="HOME" />
+                                <img src="/images/home-icon.svg" style={{ color: "yellow" }} alt="HOME" />
                                 <span>HOME</span>
                             </a>
                             <a>
                                 <img src="/images/search-icon.svg" alt="SEARCH" />
                                 <span>SEARCH</span>
                             </a>
-                            <a>
+                            {/* <a>
                                 <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
                                 <span>WATCHLIST</span>
                             </a>
                             <a>
                                 <img src="/images/original-icon.svg" alt="ORIGINALS" />
                                 <span>ORIGINALS</span>
-                            </a>
+                            </a> */}
                             <a>
                                 <img src="/images/movie-icon.svg" alt="MOVIES" />
-                                <span>MOVIES</span>
+                                <span>DECADE'S BLOCKBUSTERS</span>
                             </a>
-                            <a>
+                            {/* <a>
                                 <img src="/images/series-icon.svg" alt="SERIES" />
                                 <span>SERIES</span>
-                            </a>
+                            </a> */}
                         </NavMenu>
                         <SignOut>
                             <UserImg src={userPhoto} alt={userName} />

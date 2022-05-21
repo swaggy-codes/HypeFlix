@@ -6,11 +6,12 @@ import NewHype from "./NewHype";
 import Originals from "./Originals";
 import Trending from "./Trending";
 import VideoApp from "./VideoApp";
+import Footer from "./Footer";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import db from "../firebase";
 import { setMovies } from "../features/movie/movieSlice";
-import {selectUserName} from "../features/user/userSlice";
+import { selectUserName } from "../features/user/userSlice";
 
 const Home = (props) => {
     const dispatch = useDispatch();
@@ -59,11 +60,14 @@ const Home = (props) => {
         <Container>
             <ImgSlider />
             <Viewers />
+            <hr></hr>
             {/* <VideoApp /> */}
             <Recommends />
             <NewHype />
             <Originals />
             <Trending />
+            {/* <hr></hr> */}
+            <Footer />
         </Container>
     );
 };
